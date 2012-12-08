@@ -260,7 +260,7 @@ public class UserList extends JFrame {
 
             @Override
             public Class getColumnClass(int column) {
-                switch (column) {
+                /*switch (column) {
                     case 0:
                         return Integer.class;
                     case 1:
@@ -275,7 +275,8 @@ public class UserList extends JFrame {
                         return Integer.class;
                     default:
                         return String.class;
-                }
+                }*/
+                return ((UserListTableModel) getModel()).users.get(0).get(column).getClass();
             }
         };
         TableRowSorter<TableModel> sorter
